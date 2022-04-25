@@ -1,0 +1,50 @@
+mvn install -DskipTests
+docker run --name mongocont -d mongo //-d run as service
+docker run --name mongocont it -p8080 //port no
+docker run --name mongocont -d mongo
+
+
+FROM openjdk:16-alpine3.13
+ARG JAR_FILE=target/*.jar
+COPY ${JAR_FILE} giphermanager-1.0.jar
+ENV MONGO_HOST=mongodb://localhost
+ENV MONGO_PORT=27017
+ENV MONGO_DATABASE=FavouriteGifDB
+ENTRYPOINT ["java","-jar","/giphermanager-1.0.jar"]
+
+
+docker build . -t accountmanagerimg -f Dockerfile
+docker tag imageID cmeher/service
+$ docker tag 0d651e7d6791 purveeagrawal7/accountmanager
+$ docker tag 6e5744894f8f purveeagrawal7/eurekaservice
+docker push purveeagrawal7/accountmanager
+
+docker ps -a
+sudo docker logs [containername]
+sudo su
+sudo docker-compose -up
+sudo service mongod stop
+sudo service mysql stop
+
+docker volume prune
+
+docker build . -t eurekaserverimg -f dockerfile
+
+
+
+application.yml
+spring:
+ application:
+    name: giphermanager
+ data:
+   mongodb:
+     uri: mongodb://localhost:27017/FavouriteGifDB
+     database: FavouriteGifDB
+server:
+ port: 8080
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka

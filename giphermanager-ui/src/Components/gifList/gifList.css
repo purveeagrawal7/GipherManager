@@ -1,0 +1,17 @@
+
+  h1,
+  p {
+    font-size: 10px;
+  }
+  button.btnStyle {
+    font-size: 15px;
+    background-color: lightgray;
+  }
+  .card-text-style{
+    height: 70px;
+    overflow: hidden;
+  }
+
+  .gifList{
+      margin-bottom: 10px;
+  }

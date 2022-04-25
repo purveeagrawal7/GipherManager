@@ -1,0 +1,41 @@
+button.btn.btn-outline-light {
+    margin: 10px;
+}
+input.abc {
+    margin: 5px;
+}
+.MuiCheckbox-colorSecondary.Mui-checked {
+    color: pink!important;
+}
+
+.top-nav-right{
+    float: right;
+}
+
+.top-nav-left{
+    float: left;
+}
+
+.h-80 {
+    height: 86px;
+    width: 110%;
+}
+
+
+.navClass{
+    justify-content:center;
+    background-color: pink;
+}
+
+/* .Sticker {
+    width: 423px; 
+    height: 423px;
+} */
+
+.penguinImg{
+    top: -10px;
+    height: 55px;
+    width: 65px;
+    position: absolute;
+    left: 0px;
+}

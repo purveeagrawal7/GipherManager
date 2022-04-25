@@ -1,0 +1,42 @@
+.gif-reg-btn {
+    margin-bottom: 10px;
+}
+
+.gif-reg-header {
+    /* text-align: center; */
+    text-decoration: underline;
+    color: pink;
+    padding-left: 80px;
+}
+
+.regSignbutton {
+    margin-left:10px;
+    margin-bottom: 10px;
+}
+
+.nowrap{
+    white-space: nowrap;
+}
+
+.incwidth {
+    width: 120px;
+}
+
+.w-160 {
+    width: 160px;
+}
+
+/* form {
+    display: inline-block;
+    text-align: center;
+} */
+
+.buttonDiv {
+    margin-top: 4%;
+    margin-left: 20px;
+    /* text-align: center; */
+}
+
+/* .gif-reg-formholder{
+    text-align: center;
+} */

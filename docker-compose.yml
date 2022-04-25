@@ -1,0 +1,41 @@
+version: '3'
+services:
+  mysql:
+    image: mysql
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=Nov@1992
+  
+  mongo:
+    image: mongo
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_URI: mongodb://localhost:27017/FavouriteGifDB
+    
+  usermanagerservice:
+    image: purveeagrawal7/accountmanager
+    restart: always
+    container_name: accountmanagercontainer
+    network_mode: host
+    ports:
+      - 8082:8082
+    depends_on:
+      - mysql
+
+  giphermanagerservice:
+    image: purveeagrawal7/giphermanager
+    restart: always
+    container_name: giphermanagercontainer
+    network_mode: host
+    ports:
+      - 8080:8080
+    depends_on:
+      - mongo
+      
+  giphermanagerui:
+    image: purveeagrawal7/giperui
+    restart: always
+    ports:
+      - 3000:3000

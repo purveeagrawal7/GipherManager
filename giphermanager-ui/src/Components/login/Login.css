@@ -1,0 +1,30 @@
+.loginBlock {
+  height: 300px;
+  width: 300px;
+  background-color: pink;
+  border-radius: 6px;
+}
+.loginText {
+  font-size: 30px;
+  text-align: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: white;
+  padding-top: 100px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.loginParent {
+  margin: 50px;
+  display: flex;
+  width: 65%;
+  justify-content: center;
+  justify-content: space-around;
+}
+.registerBtn{
+  margin-top: 20px;
+  width: 300px;
+}
+.text-muted{
+  color: brown !important;
+}

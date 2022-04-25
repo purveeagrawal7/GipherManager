@@ -1,0 +1,35 @@
+image: java:11-jdk
+
+stages:
+  - test
+  - build
+  
+maven-test:
+  image: maven:3-jdk-11
+  stage: test
+  script: 'mvn test'
+  
+maven-build:
+  image: maven:3-jdk-11
+  stage: build
+  script: 'mvn package'
+  
+
+services:
+  - 'mysql:latest'
+  - 'mongo:latest'
+  
+
+variables:
+  MYSQL_ROOT_PASSWORD: Nov@1992
+  MYSQL_HOST: localhost
+  username: ${MONGO_USER}
+  password: ${MONGO_PASSWORD}
+  database: ${MONGO_DATABASE}
+  port: ${MONGO_PORT}
+  host: ${MONGO_HOST}
+  
+  
+  
+  
+  
